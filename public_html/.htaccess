@@ -17,9 +17,9 @@ php_value display_errors 0
 </IfModule>
 
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
 
 # Configuración para permitir solicitudes POST con datos JSON
 RewriteCond %{REQUEST_METHOD} =POST
